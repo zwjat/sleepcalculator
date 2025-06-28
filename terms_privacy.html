@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Sleep Calculator - Terms and Privacy Policy</title>
+    <meta name="description" content="Professional sleep calculator based on 90-minute sleep cycles. Calculate optimal bedtime and wake-up times to improve sleep quality and wake up refreshed every day.">
+    <meta name="keywords" content="sleep calculator,sleep cycles,optimal sleep time,wake up time calculator,bedtime planner,90 minute sleep cycle,sleep quality">
+    <meta property="og:title" content="Sleep Calculator">
+    <meta property="og:description" content="Want to wake up in a good shape? Find out the perfect bedtime or wake up time to rise feeling refreshed and energized.">
+    <meta property="og:site_name" content="Sleep Calculator">
+    <meta property="og:url" content="https://sleepcalculator.tech/">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://sleepcalculator.tech/image256.png">
+	<link rel="canonical" href="https://sleepcalculator.tech/">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'SF Pro Display', 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 40px;
+            animation: fadeInDown 1s ease-out;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            font-weight: 700;
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+
+        h1 a{text-decoration:none;color:#FFF}
+
+        .info-section {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            animation: fadeInUp 1s ease-out 0.3s both;
+        }
+
+        .info-section h2 {
+            color: #667eea;
+            font-size: 2rem;
+            margin-bottom: 20px;
+            text-align: center;
+            font-weight: 700;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .feature-card {
+            background: #f8f9ff;
+            padding: 25px;
+            border-radius: 15px;
+            border-left: 5px solid #667eea;
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.15);
+        }
+
+        .feature-card h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+
+        .feature-card p {
+            color: #666;
+            line-height: 1.8;
+        }
+
+        .steps-list {
+            background: #f8f9ff;
+            padding: 30px 0;
+            border-radius: 15px;
+            margin: 30px 0;
+        }
+
+        .steps-list h3 {
+            color: #667eea;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        .step {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            padding: 15px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+        }
+
+        .step-number {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 20px;
+            flex-shrink: 0;
+        }
+
+        .warning-box {
+            background: linear-gradient(135deg, #ff9a9e, #fecfef);
+            padding: 25px;
+            border-radius: 15px;
+            margin: 30px 0;
+            color: #2d3436;
+        }
+
+        .warning-box h3 {
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+
+        .warning-box ul {
+            margin-left: 20px;
+        }
+
+        .warning-box li {
+            margin-bottom: 8px;
+            line-height: 1.6;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .calculator-container,
+            .info-section {
+                padding: 25px;
+            }
+
+            .tab-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .tab-btn {
+                width: 200px;
+            }
+
+            .time-options {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1><a href="https://sleepcalculator.tech">🌙 Smart Sleep Calculator</a></h1>
+			<p>Terms and Privacy Policy</p>
+        </header>
+
+        <div class="info-section">
+        <p>This agreement describes the conditions and rules this site offers you its services at sleepcalculator.tech.</p>
+		<h2>Terms of Service</h2>
+		<h3>1. Acceptance of Terms</h3><p>By accessing and using sleepcalculator.io ("the Website"), you accept and agree to be bound by the terms and conditions outlined in this agreement. If you do not agree to these terms, you must not use the Website.</p><h3>2. Use License</h3><p>Permission is granted to temporarily access the materials (information or software) on sleepcalculator.io for personal, non-commercial viewing only. This is the grant of a license, not a transfer of title.</p><h3>3. Disclaimer</h3><p>The materials on sleepcalculator.io are provided on an "as is" basis. sleepcalculator.io makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties including, without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights.</p><h3>4. Limitations</h3><p>In no event shall sleepcalculator.io or its operators be liable for any damages (including, without limitation, damages for loss of data or profit, or due to business interruption) arising out of the use or inability to use the materials on the Website.</p><h3>5. Changes to Terms</h3><p>We reserve the right to revise these Terms of Service at any time without notice. By using the Website, you agree to be bound by the then-current version of these Terms.</p>
+		<h2>Privacy Policy</h2>
+		<h3>1. Information Collection</h3><p>sleepcalculator.io does not collect any personally identifiable information. The application performs all calculations locally in your browser and does not require user accounts or logins.</p><h3>2. Analytics and Cookies</h3><p>We use PostHog, a privacy-friendly analytics tool, to understand general usage patterns and improve the Website. This may involve the use of cookies or similar technologies. These analytics are anonymized and do not identify you personally. You have the option to opt in or out of analytics tracking through the cookie consent banner displayed on first visit.</p><h3>3. Third-Party Services</h3><p>Apart from PostHog analytics, we do not integrate with any third-party services that collect personal data.</p><h3>4. Data Security</h3><p>Because we do not collect or store personal data, your privacy is inherently protected. All interactions and calculations are performed directly in your browser.</p><h3>5. Changes to This Privacy Policy</h3><p>We may update this Privacy Policy from time to time. Changes will be posted on this page, and the "Last Updated" date at the bottom will be revised accordingly.</p><h3>6. Contact Us</h3><p>If you have any questions about these Terms or the Privacy Policy, please contact us via hey@sleepcalculator.tech.</p>
+        </div></div>
+</body>
+</html>

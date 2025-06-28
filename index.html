@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Sleep Calculator - Science-Based Sleep Cycle Optimization | 90-Minute Sleep Cycle Tool</title>
+    <meta name="description" content="Professional sleep calculator based on 90-minute sleep cycles. Calculate optimal bedtime and wake-up times to improve sleep quality and wake up refreshed every day.">
+    <meta name="keywords" content="sleep calculator,sleep cycles,optimal sleep time,wake up time calculator,bedtime planner,90 minute sleep cycle,sleep quality">
+    <meta property="og:title" content="Sleep Calculator">
+    <meta property="og:description" content="Want to wake up in a good shape? Find out the perfect bedtime or wake up time to rise feeling refreshed and energized.">
+    <meta property="og:site_name" content="Sleep Calculator">
+    <meta property="og:url" content="https://sleepcalculator.tech/">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://sleepcalculator.tech/image256.png">
+	<link rel="canonical" href="https://sleepcalculator.tech/">
+    <style>* {margin: 0;padding: 0;box-sizing: border-box;}body {font-family: 'SF Pro Display', 'Helvetica Neue', Arial, sans-serif;line-height: 1.6;color: #333;background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);min-height: 100vh;}h1 a{text-decoration:none;color:#FFF}.container {max-width: 1200px;margin: 0 auto;padding: 20px;}.header {text-align: center;color: white;margin-bottom: 40px;animation: fadeInDown 1s ease-out;}.header h1 {font-size: 2.5rem;margin-bottom: 10px;text-shadow: 2px 2px 4px rgba(0,0,0,0.3);font-weight: 700;}.header p {font-size: 1.2rem;opacity: 0.9;font-weight: 300;}.calculator-container {background: rgba(255, 255, 255, 0.95);backdrop-filter: blur(10px);border-radius: 20px;padding: 40px;box-shadow: 0 20px 40px rgba(0,0,0,0.1);margin-bottom: 40px;animation: fadeInUp 1s ease-out;}.tab-buttons {display: flex;justify-content: center;margin-bottom: 30px;gap: 10px;}.tab-btn {padding: 12px 24px;border: none;border-radius: 25px;background: #f0f0f0;color: #666;cursor: pointer;font-size: 16px;font-weight: 500;transition: all 0.3s ease;}.tab-btn.active {background: linear-gradient(135deg, #667eea, #764ba2);color: white;transform: translateY(-2px);box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);}.tab-content {display: none;animation: fadeIn 0.5s ease-out;}.tab-content.active {display: block;}.input-group {margin-bottom: 25px;}.input-group label {display: block;font-size: 18px;font-weight: 600;margin-bottom: 10px;color: #333;}.time-input {width: 100%;padding: 15px;font-size: 18px;border: 2px solid #e0e0e0;border-radius: 10px;text-align: center;transition: all 0.3s ease;}.time-input:focus {outline: none;border-color: #667eea;box-shadow: 0 0 20px rgba(102, 126, 234, 0.2);}.calculate-btn {width: 100%;padding: 18px;font-size: 18px;font-weight: 600;border: none;border-radius: 10px;background: linear-gradient(135deg, #667eea, #764ba2);color: white;cursor: pointer;transition: all 0.3s ease;margin-bottom: 30px;}.calculate-btn:hover {transform: translateY(-2px);box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);}.results {background: #f8f9ff;border-radius: 15px;padding: 25px;margin-top: 20px;border-left: 5px solid #667eea;}.results h3 {color: #667eea;margin-bottom: 15px;font-size: 20px;}.time-options {display: grid;grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));gap: 15px;margin-bottom: 20px;}.time-option {background: white;padding: 15px;border-radius: 10px;text-align: center;box-shadow: 0 3px 10px rgba(0,0,0,0.1);transition: all 0.3s ease;cursor: pointer;}.time-option.suggest-yes{border: 1px dashed red}.time-option .info {margin-top:10px;color: red}.time-option:hover {transform: translateY(-3px);box-shadow: 0 8px 20px rgba(102, 126, 234, 0.2);}.time-option .time {font-size: 24px;font-weight: bold;color: #667eea;margin-bottom: 5px;}.time-option .cycles {font-size: 14px;color: #666;}.sleep-tip {background: linear-gradient(135deg, #ffeaa7, #fab1a0);padding: 20px;border-radius: 15px;margin-top: 20px;color: #2d3436;}.sleep-tip h4 {margin-bottom: 10px;font-size: 18px;}.info-section {background: rgba(255, 255, 255, 0.95);backdrop-filter: blur(10px);border-radius: 20px;padding: 40px;box-shadow: 0 20px 40px rgba(0,0,0,0.1);animation: fadeInUp 1s ease-out 0.3s both;}.info-section h2 {color: #667eea;font-size: 2rem;margin-bottom: 20px;text-align: center;font-weight: 700;}.features-grid {display: grid;grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));gap: 30px;margin: 40px 0;}.feature-card {background: #f8f9ff;padding: 25px;border-radius: 15px;border-left: 5px solid #667eea;transition: all 0.3s ease;}.feature-card:hover {transform: translateY(-5px);box-shadow: 0 10px 25px rgba(102, 126, 234, 0.15);}.feature-card h3 {color: #667eea;margin-bottom: 15px;font-size: 1.3rem;font-weight: 600;}.feature-card p {color: #666;line-height: 1.8;}.steps-list {background: #f8f9ff;padding: 30px 0;border-radius: 15px;margin: 30px 0;}.steps-list h3 {color: #667eea;margin-bottom: 20px;font-size: 1.5rem;font-weight: 600;}.step {display: flex;align-items: center;margin-bottom: 20px;padding: 15px;background: white;border-radius: 10px;box-shadow: 0 3px 10px rgba(0,0,0,0.05);}.step-number {background: linear-gradient(135deg, #667eea, #764ba2);color: white;width: 40px;height: 40px;border-radius: 50%;display: flex;align-items: center;justify-content: center;font-weight: bold;margin-right: 20px;flex-shrink: 0;}.warning-box {background: linear-gradient(135deg, #ff9a9e, #fecfef);padding: 25px;border-radius: 15px;margin: 30px 0;color: #2d3436;}.warning-box h3 {margin-bottom: 15px;font-size: 1.3rem;font-weight: 600;}.warning-box ul {margin-left: 20px;}.warning-box li {margin-bottom: 8px;line-height: 1.6;}@keyframes fadeInDown {from {opacity: 0;transform: translateY(-30px);}to {opacity: 1;transform: translateY(0);}}@keyframes fadeInUp {from {opacity: 0;transform: translateY(30px);}to {opacity: 1;transform: translateY(0);}}@keyframes fadeIn {from {opacity: 0;}to {opacity: 1;}}@media (max-width: 768px) {.container {padding: 15px;}.header h1 {font-size: 2rem;}.calculator-container, .info-section {padding: 25px;}.tab-buttons {flex-direction: column;align-items: center;}.tab-btn {width: 200px;}.time-options {grid-template-columns: repeat(2, 1fr);}.features-grid {grid-template-columns: 1fr;}}</style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/clocklet@0.3.0/css/clocklet.min.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1><a href="https://sleepcalculator.tech">🌙 Smart Sleep Calculator</a></h1>
+            <p>Science-based sleep planning tool using 90-minute sleep cycles</p>
+        </header>
+
+        <div class="calculator-container">
+            <div class="tab-buttons">
+                <button class="tab-btn active" onclick="switchTab('wakeup')">Set Wake Time</button>
+                <button class="tab-btn" onclick="switchTab('bedtime')">Set Bedtime</button>
+                <button class="tab-btn" onclick="switchTab('now')">Sleep Now</button>
+            </div>
+
+            <div id="wakeup-tab" class="tab-content active">
+                <div class="input-group">
+                    <label for="wakeup-time">🌅 What time do you want to wake up?</label>
+					<input data-clocklet="class-name:my-clocklet-style;placement:top;alignment:center;format: h:mm a" id="wakeup-time" value="7:00 am" class="time-input">
+                </div>
+                <button class="calculate-btn" onclick="calculateBedtime()">💤 Calculate Optimal Bedtime</button>
+                <div id="bedtime-results" class="results" style="display:none;">
+                    <h3>Recommended Bedtimes</h3>
+                    <div id="bedtime-options" class="time-options"></div>
+                    <div class="sleep-tip">
+                        <h4>💡 Sleep Tip</h4>
+                        <p>For optimal sleep, start preparing for bed 30 minutes before your calculated bedtime. Avoid electronic devices and keep your room dark and quiet.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="bedtime-tab" class="tab-content">
+                <div class="input-group">
+                    <label for="bedtime-input">🌙 What time do you plan to go to bed?</label>
+					<input data-clocklet="class-name:my-clocklet-style;placement:top;alignment:center;format: h:mm a" id="bedtime-input" value="11:00 pm" class="time-input">
+                </div>
+                <button class="calculate-btn" onclick="calculateWakeupTime()">⏰ Calculate Optimal Wake Time</button>
+                <div id="wakeup-results" class="results" style="display:none;">
+                    <h3>Recommended Wake Times</h3>
+                    <div id="wakeup-options" class="time-options"></div>
+                    <div class="sleep-tip">
+                        <h4>💡 Wake-up Tip</h4>
+                        <p>Waking up at these times will help you feel more refreshed as you'll be in a lighter sleep phase. Avoid snoozing as it can make you feel groggier.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="now-tab" class="tab-content">
+                <div class="input-group">
+                    <label>🛏️ If you go to sleep right now</label>
+                    <p style="text-align: center; font-size: 18px; color: #667eea; margin: 20px 0;">
+                        Current time: <span id="current-time"></span>
+                    </p>
+                </div>
+                <button class="calculate-btn" onclick="calculateFromNow()">🚀 Calculate Wake Times</button>
+                <div id="now-results" class="results" style="display:none;">
+                    <h3>Recommended Wake Times</h3>
+                    <div id="now-options" class="time-options"></div>
+                    <div class="sleep-tip">
+                        <h4>💡 Sleep Now Reminder</h4>
+                        <p>These times account for the average 15 minutes it takes to fall asleep. Try to relax and avoid stimulating activities for the best results.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-section">
+            <h2>🧠 Why Choose Our Smart Sleep Calculator?</h2>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>🔬 Science-Based</h3>
+                    <p>Built on authoritative sleep research and the 90-minute sleep cycle theory. Wake up during lighter sleep phases to avoid grogginess and feel more refreshed.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>⚡ Boost Productivity</h3>
+                    <p>Scientifically planned sleep schedules significantly improve your daytime energy and work efficiency. Quality sleep is the foundation of peak performance.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🎯 Personalized Calculations</h3>
+                    <p>Multiple calculation modes to suit your needs - whether you're planning tomorrow's wake time or need immediate rest, we provide the most suitable recommendations.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>💡 Expert Guidance</h3>
+                    <p>Beyond time calculations, we provide professional sleep advice and tips to help you establish healthy sleep habits for long-term wellness.</p>
+                </div>
+            </div>
+
+            <div class="steps-list">
+                <h3>📋 How to Use the Sleep Calculator</h3>
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div>
+                        <strong>Choose Your Mode:</strong> Select from "Set Wake Time", "Set Bedtime", or "Sleep Now" based on your current needs.
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div>
+                        <strong>Enter Your Time:</strong> Input your desired wake-up time or bedtime in the corresponding field.
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div>
+                        <strong>Calculate:</strong> Click the calculate button and our system will generate optimal times based on 90-minute sleep cycles.
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div>
+                        <strong>Choose Your Time:</strong> Select the most suitable option from the multiple recommended times that fit your schedule.
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">5</div>
+                    <div>
+                        <strong>Stay Consistent:</strong> Follow the recommended schedule consistently, and you'll notice significant improvements in sleep quality over time.
+                    </div>
+                </div>
+            </div>
+
+            <div class="warning-box">
+                <h3>⚠️ Important Considerations</h3>
+                <ul>
+                    <li><strong>Individual Differences:</strong> Sleep needs vary by person. Adults typically need 7-9 hours of sleep. Adjust recommendations based on your personal requirements.</li>
+                    <li><strong>Sleep Environment:</strong> Maintain a quiet, dark, and cool sleeping environment to enhance sleep quality.</li>
+                    <li><strong>Pre-Sleep Routine:</strong> Stop using electronic devices 1 hour before bedtime and engage in relaxing activities.</li>
+                    <li><strong>Consistent Schedule:</strong> Try to maintain regular sleep times, including weekends, to establish a healthy circadian rhythm.</li>
+                    <li><strong>Health Concerns:</strong> If you experience persistent sleep problems, consult with a healthcare professional.</li>
+                    <li><strong>Caffeine Impact:</strong> Avoid caffeine after 4 PM to prevent interference with nighttime sleep.</li>
+                </ul>
+            </div>
+
+            <div style="text-align: center; margin-top: 40px; padding: 30px; background: linear-gradient(135deg, #667eea, #764ba2); border-radius: 15px; color: white;">
+                <h3>🌟 Start Your Journey to Better Sleep</h3>
+                <p style="font-size: 18px; margin-top: 15px;">
+                    Quality sleep is the cornerstone of a healthy lifestyle. Use our Smart Sleep Calculator to let science 
+                    guide your sleep schedule, and wake up energized and ready to tackle each day with confidence!
+                </p>
+            </div>
+        </div>
+		<div style="text-align: center; margin-top: 20px; padding:10px 0;background: linear-gradient(135deg, #667eea, #764ba2); border-radius: 15px; color: white;"><p>©2025 SleepCalculator.tech | <a href="/terms_privacy.html" target="_blank" style="text-decoration: none;">Terms and Privacy Policy</a></p>
+		</div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/clocklet@0.3.0"></script>
+    <script>function updateCurrentTime(){const t=(new Date).toLocaleTimeString("en-US",{hour:"2-digit",minute:"2-digit",hour12:!0}),e=document.getElementById("current-time");e&&(e.textContent=t)}function switchTab(t){document.querySelectorAll(".tab-content").forEach(t=>{t.classList.remove("active")}),document.querySelectorAll(".tab-btn").forEach(t=>{t.classList.remove("active")}),document.getElementById(t+"-tab").classList.add("active"),event.target.classList.add("active"),"now"===t&&(updateCurrentTime(),setInterval(updateCurrentTime,1e3))}function calculateBedtime(){const t=document.getElementById("wakeup-time").value;if(!t)return void alert("Please select a wake-up time!");const[e,n]=t.replace(" am","").replace(" pm","").split(":").map(Number),s=60*e+n;displayBedtimeResults([6,5,4,3,2,1].map(t=>{const e=90*t,n=(s-e-15+1440)%1440,i=Math.floor(n/60),a=i>12?" pm":" am",l=n%60;return{time:`${String(i>12?i-12:0==i?12:i)}:${String(l).padStart(2,"0")} ${a}`,cycles:t,totalHours:Math.floor(e/60),totalMinutes:e%60,suggest:t>4?"yes":"no"}}))}function calculateWakeupTime(){const t=document.getElementById("bedtime-input").value;if(!t)return void alert("Please select a bedtime!");const[e,n]=t.replace(" am","").replace(" pm","").split(":").map(Number),s=60*e+n;displayWakeupResults([1,2,3,4,5,6].map(t=>{const e=90*t,n=(s+15+e)%1440,i=Math.floor(n/60),a=i>12?" pm":" am",l=n%60;return{time:`${String(i>12?i-12:0==i?12:i)}:${String(l).padStart(2,"0")}  ${a}`,cycles:t,totalHours:Math.floor(e/60),totalMinutes:e%60,suggest:t>4?"yes":"no"}}))}function calculateFromNow(){const t=new Date,e=60*t.getHours()+t.getMinutes();displayNowResults([6,5,4,3,2,1].map(t=>{const n=90*t,s=(e+15+n)%1440,i=Math.floor(s/60),a=i>12?" pm":" am",l=s%60;return{time:`${String(i>12?i-12:0==i?12:i)}:${String(l).padStart(2,"0")} ${a}`,cycles:t,totalHours:Math.floor(n/60),totalMinutes:n%60,suggest:t>4?"yes":"no"}}))}function displayBedtimeResults(t){document.getElementById("bedtime-options").innerHTML=t.map(t=>`\n                <div class="time-option suggest-${t.suggest}">\n                    <div class="time">${t.time}</div>\n                    <div class="cycles">${t.cycles} cycles (${t.totalHours}h${t.totalMinutes>0?" "+t.totalMinutes+"m":""})</div>\n                    <div class="info">${"yes"==t.suggest?"SUGGESTED":""}</div>\n                </div>\n            `).join(""),document.getElementById("bedtime-results").style.display="block"}function displayWakeupResults(t){document.getElementById("wakeup-options").innerHTML=t.map(t=>`\n                <div class="time-option">\n                    <div class="time">${t.time}</div>\n                    <div class="cycles">${t.cycles} cycles (${t.totalHours}h${t.totalMinutes>0?" "+t.totalMinutes+"m":""})</div>\n                    <div class="info">${"yes"==t.suggest?"SUGGESTED":""}</div>\n                </div>\n            `).join(""),document.getElementById("wakeup-results").style.display="block"}function displayNowResults(t){document.getElementById("now-options").innerHTML=t.map(t=>`\n                <div class="time-option">\n                    <div class="time">${t.time}</div>\n                    <div class="cycles">${t.cycles} cycles (${t.totalHours}h${t.totalMinutes>0?" "+t.totalMinutes+"m":""})</div>\n                    <div class="info">${"yes"==t.suggest?"SUGGESTED":""}</div>\n                </div>\n            `).join(""),document.getElementById("now-results").style.display="block"}document.addEventListener("DOMContentLoaded",function(){updateCurrentTime(),document.getElementById("wakeup-time").value="7:00 am",document.getElementById("bedtime-input").value="11:00 pm"});</script>
+</body>
+</html>
